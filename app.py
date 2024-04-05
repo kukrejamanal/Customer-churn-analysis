@@ -5,6 +5,10 @@ model = joblib.load("model.sav")
 from preprocessing import preprocess
 
 def main():
+    st.set_page_config(
+        page_title="Customer churn prediction",
+        page_icon=":book:"
+    )
     st.title('Customer Churn Prediction')
     add_selectbox = st.sidebar.selectbox(
         "How would you like to predict?", ("Online", "Batch"))
